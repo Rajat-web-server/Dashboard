@@ -2,26 +2,56 @@ body {
     display: grid;
     grid-template-columns: 20vw 80vw;
     min-height: 100vh;
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    padding-bottom: 5vh;
+    /* padding-left:20vw ; */
 }
 
+.body-right {
+    padding-top: 16vh;
+}
+
+/** header */
 .header {
     background-color: blue;
     width: 80vw;
-    height: 20vh;
+    height: 16vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
 }
 
+.header-left {
+    background-color: rgb(113, 113, 184);
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/**Sidebar*/
 .sidebar {
     background-color: greenyellow;
     width: 20vw;
     min-height: 100vh;
     /* overflow-y: auto; */
     position: fixed;
+    left: 0;
+    top: 0;
     display: flex;
     flex-direction: column;
     /* justify-content:space-around; */
     gap: 100px;
     text-align: left;
+    /* overflow-y: auto; */
 }
 
 .function>ol {
@@ -39,19 +69,17 @@ body {
 .dashboard {
     background-color: rgb(229, 33, 33);
     width: 80vw;
-    height: 80vh;
+    height: 800px;
     display: grid;
     grid-template-columns: 60vw 20vw;
+    /* padding-left: 40vw; */
 }
 
-.footer {
-    background-color: blueviolet;
-    width: 100vw;
-}
 
 .left_dash {
     background-color: burlywood;
     width: 60vw;
+    height: 800px;
     grid-template-rows: 10vh 70vh;
 }
 
@@ -63,21 +91,48 @@ body {
 
 .boxes {
     background-color: cornflowerblue;
-    height: 70vh;
+    height: 800px;
     display: grid;
-    grid-template-columns: 30vw 30vw;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+
 }
 
 .boxes>div {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     background-color: crimson;
 }
 
 .right_dash {
-    background-color: antiquewhite;
+    background-color: rgb(252, 190, 109);
     width: 20vw;
     height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    right: 0;
+}
+
+.announcement {
+    height: 40vh;
+}
+
+.trending {
+    height: 40vh;
+}
+
+.footer {
+    background-color: blueviolet;
+    width: 100vw;
+    height: 5vh;
+    bottom: 0;
+    left: 0;
+    position: fixed;
 }
 
 /* .sidebar{
