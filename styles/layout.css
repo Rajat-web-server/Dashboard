@@ -4,42 +4,84 @@ body {
     min-height: 100vh;
     /* overflow-y: auto; */
     padding-bottom: 5vh;
-    /* padding-left:20vw ; */
 }
 
 .body-right {
     padding-top: 16vh;
+    
 }
 
 /** header */
 .header {
-    background-color: blue;
+    /* background-color: blue; */
     width: 80vw;
     height: 16vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     position: fixed;
     top: 0;
 }
 
 .header-left {
-    background-color: rgb(113, 113, 184);
-    width: 60vw;
+    /* background-color: rgb(113, 113, 184); */
+    width: 50vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    border: 3px solid chartreuse;
+}
+.header-left>.upward{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.header-left>.downward{
+    display: flex;
+    flex-direction: row;
+}
+.header-left>.downward>p{
+    padding-top:10px ;
+}
+input{
+    width: 45vw;
+    height: 4vh;
+    outline: none;
+    font-size: 20px;
+    border-radius: 30px;
+    padding-left: 10px;
 }
 
 .header-right {
+    width: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    border: 3px solid rgb(255, 0, 60);
+     
 }
+.header-right>.upward{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.header-right>.upward>p{
+    padding-top: 10px;
+}
+.header-right>.downward{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-right>.downward>button{
+    width: 6vw;
+    height: 4vh;
+}
+
 
 /**Sidebar*/
 .sidebar {
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
     width: 20vw;
     min-height: 100vh;
     /* overflow-y: auto; */
@@ -67,63 +109,104 @@ body {
 }
 
 .dashboard {
-    background-color: rgb(229, 33, 33);
+    /* background-color: rgb(229, 33, 33); */
     width: 80vw;
     height: 800px;
     display: grid;
-    grid-template-columns: 60vw 20vw;
+    grid-template-columns: 55vw 25vw;
+     /* scrollbar-width: none; */
     /* padding-left: 40vw; */
 }
 
 
 .left_dash {
-    background-color: burlywood;
-    width: 60vw;
+    /* background-color: burlywood; */
+    width: auto;
     height: 800px;
     grid-template-rows: 10vh 70vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .project-title {
+    color: black;
     width: 60vw;
-    height: 10vh;
-    background-color: brown;
+    height: 50px;
+    /* background-color: brown; */
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 10px;
 }
 
 .boxes {
-    background-color: cornflowerblue;
+    /* background-color: cornflowerblue; */
     height: 800px;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(3, auto);
+    display: flex;
+    /* grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto); */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     align-items: center;
     justify-content: space-around;
-
 }
 
 .boxes>div {
-    width: 200px;
+    width: 300px;
     height: 200px;
-    background-color: crimson;
+    /* background-color: crimson; */
 }
 
 .right_dash {
-    background-color: rgb(252, 190, 109);
-    width: 20vw;
-    height: 80vh;
+    /* background-color: rgb(252, 190, 109); */
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: fixed;
     right: 0;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .announcement {
-    height: 40vh;
+    height: auto;
+    border: 5px solid black;
+    color: black;
+    padding-top: 20px;
+}
+.ann{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.ann>div{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
 }
 
 .trending {
-    height: 40vh;
+    height: auto;
+    border: 5px solid red;
+    color: black;
+    padding-top: 20px;
+}
+.tren{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tren>div{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
 }
 
 .footer {
@@ -136,6 +219,6 @@ body {
 }
 
 /* .sidebar{
-    width: 3vw;
+    width: 40px;
     font-size: 0;
 } */
